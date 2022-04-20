@@ -1,25 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Main, InputField, Button, FormGroup, Heading } from 'govuk-react'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <Main>
+      <Heading size="LARGE">Check a Fishing Licence</Heading>
+      <FormGroup>
+        <InputField
+          input={{
+            name: 'group0'
+          }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          Surname
+        </InputField>
+      </FormGroup>
+      <Button>Find</Button>
+    </Main>
   );
 }
 
