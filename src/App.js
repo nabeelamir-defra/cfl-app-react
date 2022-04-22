@@ -10,7 +10,8 @@ function App() {
 
   const submitForm = async (event) => {
     event.preventDefault()
-    const result = await fetch(`${process.env.REACT_APP_SALES_API_URL}/permits`)
+    setResults([])
+    const result = await fetch(`${process.env.REACT_APP_SALES_API_URL}/permissions?last_name=${surname.value}`)
     const json = await result.json()
     setResults(json)
 
